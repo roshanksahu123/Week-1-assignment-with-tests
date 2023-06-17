@@ -8,7 +8,19 @@
 */
 
 function isAnagram(str1, str2) {
+    if (sort(str1.toLowerCase()) == sort(str2.toLowerCase())) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
+function sort(str) {
+    var array = str.split("");
+    array = array.sort();
+    var sortedString = array.join();
+    return sortedString;
 }
 
 module.exports = isAnagram;
